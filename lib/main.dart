@@ -32,7 +32,7 @@ final stories = Expanded(
                   image: new DecorationImage(
                       fit: BoxFit.fill,
                       image: new NetworkImage(
-                          "https://pbs.twimg.com/profile_images/916384996092448768/PF1TSFOE_400x400.jpg")),
+                          "https://scontent.fvvi1-2.fna.fbcdn.net/v/t1.0-9/58377585_10161639504625321_5204256535928111104_n.jpg?_nc_cat=106&_nc_ht=scontent.fvvi1-2.fna&oh=07ccc0a40d9fd2b496b478213fab1507&oe=5D56BFE4")),
                 ),
                 margin: const EdgeInsets.symmetric(horizontal: 8.0),
               ),
