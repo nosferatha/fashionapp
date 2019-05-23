@@ -1,4 +1,3 @@
-import 'package:fashionapp/top_options_bar.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(FashionApp());
@@ -69,7 +68,6 @@ class _MyHomeFashionAppState extends State<MyHomeFashionApp>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _tabController = new TabController(vsync: this, initialIndex: 1, length: 4);
   }
@@ -77,41 +75,39 @@ class _MyHomeFashionAppState extends State<MyHomeFashionApp>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-            icon: Icon(Icons.search),
-            tooltip: "Buscar",
-            onPressed: onSearchButtonPressed,
-          ),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.bookmark),
-              tooltip: 'Favoritos',
-              onPressed: onFavoriteButtonPressed,
-            )
-          ],
-          bottom: TabBar(
-            controller: _tabController,
-            tabs: <Widget>[
-              new Tab(
-                icon: new Icon(Icons.accessibility),
-                text: "DRESS TIME",
-              ),
-              new Tab(
-                icon: new Icon(Icons.work),
-                text: "TIMELESS",
-              ),
-              new Tab(
-                icon: new Icon(Icons.alarm),
-                text: "MOM",
-              ),
-            ],
-          ),
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.search),
+          tooltip: "Buscar",
+          onPressed: onSearchButtonPressed,
         ),
-        body: Text("a"),
-        bottomNavigationBar: BottomAppBar(
-          child: ListView(),
-        ));
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.bookmark),
+            tooltip: 'Favoritos',
+            onPressed: onFavoriteButtonPressed,
+          )
+        ],
+        bottom: TabBar(
+          controller: _tabController,
+          tabs: <Widget>[
+            new Tab(
+              icon: new Icon(Icons.accessibility),
+              text: "DRESS TIME",
+            ),
+            new Tab(
+              icon: new Icon(Icons.work),
+              text: "TIMELESS",
+            ),
+            new Tab(
+              icon: new Icon(Icons.alarm),
+              text: "MOM",
+            ),
+          ],
+        ),
+      ),
+      body: Text("a"),
+    );
   }
 
   void onFavoriteButtonPressed() {}
