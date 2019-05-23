@@ -106,7 +106,17 @@ class _MyHomeFashionAppState extends State<MyHomeFashionApp>
           ],
         ),
       ),
-      body: Text("a"),
+      body: new Container(
+        margin: const EdgeInsets.all(16.0),
+        child: new Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            stories,
+          ],
+        ),
+      ),
     );
   }
 
